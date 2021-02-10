@@ -1,0 +1,1 @@
+python main.py --model 'MLP(depth=5,width=5)' --dataset MNIST --predictor-hidden-size 0 --loss 'hinge(mix=0.75)' --p-start 8 --p-end 1000 --epochs 0,50,0,350,400 --kappa 1.0 --eps-test 0.3 --eps-train 0.45 -b 512 --lr 0.02 --wd 5e-3 --gpu 0 --visualize -p 200

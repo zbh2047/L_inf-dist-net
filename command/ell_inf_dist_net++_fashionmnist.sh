@@ -1,0 +1,1 @@
+python main.py --model 'MLPFeature(depth=4,width=5)' --dataset FashionMNIST --predictor-hidden-size 512 --loss 'cross_entropy' --p-start 8 --p-end 1000 --epochs 0,50,50,350,400 --kappa 0.5 --eps-test 0.1 --eps-train 0.11 -b 512 --lr 0.02 --wd 5e-3 --gpu 0 --visualize -p 200
