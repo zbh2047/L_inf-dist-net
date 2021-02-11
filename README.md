@@ -1,4 +1,4 @@
-# L_inf-dist Net: Towards Certifying L_inf Robustness using Neural Networks with -L_inf-dist Neurons  
+# L_inf-dist Net: Towards Certifying L_inf Robustness using Neural Networks with L_inf-dist Neurons  
 
 ## Introduction
 
@@ -37,17 +37,17 @@ bash command/ell_inf_dist_net++_cifar10.sh
 
 ## Advanced Training Options
 
-### Saving and Loading
-
-The model is automatically saved when the training procedure finishes. Use `--checkpoint model_file_name.pth` to load a specified model before training. You can use `--start-epoch NUM_EPOCHS` to skip training and only test the model's performance for a pretrained model, where `NUM_EPOCHS` is the number of epochs in total.
-
 ### Multi-GPU Training
 
 We also support multi-GPU training using distributed data parallel. By default the code will use all available GPUs for training. To use a single GPU, add the following parameter `--gpu GPU_ID` where `GPU_ID` is the GPU ID. You can also specify `--world-size`, `--rank` and `--dist-url` for advanced multi-GPU training.
 
+### Saving and Loading
+
+The model is automatically saved when the training procedure finishes. Use `--checkpoint model_file_name.pth` to load a specified model before training. You can use `--start-epoch NUM_EPOCHS` to skip training and only test the model's performance for a pretrained model, where `NUM_EPOCHS` is the number of epochs in total.
+
 ### Displaying training curves
 
-By default the code will generate three files named `train.log`, `test.log` and `log.txt` which contains all training logs. If you want to further display training curves, you can add the parameter `--visualize` to show these curves using Tensorboard. 
+By default the code will generate three files named `train.log`, `test.log` and `log.txt` which contain all training logs. If you want to further display training curves, you can add the parameter `--visualize` to show these curves using Tensorboard. 
 
 ## Contact
 
