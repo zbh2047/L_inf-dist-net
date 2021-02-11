@@ -1,8 +1,8 @@
-# $\ell_\infty$-dist Net: Towards Certifying $\ell_\infty$Robustness using Neural Networks with $\ell_\infty$-dist Neurons  
+# L_inf-dist Net: Towards Certifying L_inf Robustness using Neural Networks with -L_inf-dist Neurons  
 
 ## Introduction
 
-This is the official code for training the $\ell_\infty$-dist net, a theoretically principled neural network that inherently resists $\ell_\infty$-norm perturbations. We consistently achieve state-of-the-art performance on commonly used datasets: **93.09%** certiﬁed accuracy on MNIST under $\epsilon = 0.3$, **79.23%** on Fashion-MNIST under $\epsilon = 0.1$ and **35.10%** on CIFAR-10 under $\epsilon = 8/255$. Our paper is on [arxiv]( https://github.com/zbh2047/L_inf-dist-net ).
+This is the official code for training the L_inf-dist net, a theoretically principled neural network that inherently resists L_inf-norm perturbations. We consistently achieve state-of-the-art performance on commonly used datasets: **93.09%** certiﬁed accuracy on MNIST under eps = 0.3, **79.23%** on Fashion-MNIST under eps = 0.1 and **35.10%** on CIFAR-10 under eps = 8/255. Our paper is on [arxiv]( https://github.com/zbh2047/L_inf-dist-net ).
 
 ## Dependencies
 
@@ -55,6 +55,7 @@ Please contact [zhangbohang@pku.edu.cn](zhangbohang@pku.edu.cn)  if you have any
 
 ## Citation
 
+```
 @article{zhang2021certifying,
       title={Towards Certifying $\ell_\infty$ Robustness using Neural Networks with $\ell_\infty$-dist Neurons}, 
       author={Bohang Zhang and Tianle Cai and Zhou Lu and Di He and Liwei Wang},
@@ -63,3 +64,5 @@ Please contact [zhangbohang@pku.edu.cn](zhangbohang@pku.edu.cn)  if you have any
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
+```
+
