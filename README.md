@@ -1,0 +1,65 @@
+# $\ell_\infty$-dist Net: Towards Certifying $\ell_\infty$Robustness using Neural Networks with $\ell_\infty$-dist Neurons  
+
+## Introduction
+
+This is the official code for training the $\ell_\infty$-dist net, a theoretically principled neural network that inherently resists $\ell_\infty$-norm perturbations. We consistently achieve state-of-the-art performance on commonly used datasets: **93.09%** certiﬁed accuracy on MNIST under $\epsilon = 0.3$, **79.23%** on Fashion-MNIST under $\epsilon = 0.1$ and **35.10%** on CIFAR-10 under $\epsilon = 8/255$. Our paper is on [arxiv]( https://github.com/zbh2047/L_inf-dist-net ).
+
+## Dependencies
+
+- Pytorch 1.6.0
+- Tensorboard (optional)
+
+## Getting Started with the Code
+
+### Installation
+
+After cloning this repo into your computer, first run the following command to install the CUDA extension, which can speed up the training procedure considerably.
+
+```
+python setup.py install --user
+```
+
+### Reproducing SOTA Results
+
+In this repo, we provide complete training scripts to reproduce the results on MNIST, Fashion-MNIST and CIFAR-10 datasets in our paper. These scripts are in the `command` folder. 
+
+For example, to reproduce the results of CIFAR-10 using the $\ell_\infty$-dist Net alone, simply run
+
+```
+bash command/ell_inf_dist_net_cifar10.sh
+```
+
+To reproduce the results of CIFAR-10 using the $\ell_\infty$-dist Net+MLP, simply run
+
+```
+bash command/ell_inf_dist_net++_cifar10.sh
+```
+
+## Advanced Training Options
+
+### Saving and Loading
+
+The model is automatically saved when the training procedure finishes. Use `--checkpoint model_file_name.pth` to load a specified model before training. You can use `--start-epoch NUM_EPOCHS` to skip training and only test the model's performance for a pretrained model, where `NUM_EPOCHS` is the number of epochs in total.
+
+### Multi-GPU Training
+
+We also support multi-GPU training using distributed data parallel. By default the code will use all available GPUs for training. To use a single GPU, add the following parameter `--gpu GPU_ID` where `GPU_ID` is the GPU ID. You can also specify `--world-size`, `--rank` and `--dist-url` for advanced multi-GPU training.
+
+### Displaying training curves
+
+By default the code will generate three files named `train.log`, `test.log` and `log.txt` which contains all training logs. If you want to further display training curves, you can add the parameter `--visualize` to show these curves using Tensorboard. 
+
+## Contact
+
+Please contact [zhangbohang@pku.edu.cn](zhangbohang@pku.edu.cn)  if you have any question on our paper or the codes. Enjoy! 
+
+## Citation
+
+@article{zhang2021certifying,
+      title={Towards Certifying $\ell_\infty$ Robustness using Neural Networks with $\ell_\infty$-dist Neurons}, 
+      author={Bohang Zhang and Tianle Cai and Zhou Lu and Di He and Liwei Wang},
+      year={2021},
+      eprint={2102.05363},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}

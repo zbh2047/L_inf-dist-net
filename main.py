@@ -358,7 +358,7 @@ def main_worker(gpu, parallel, args, result_dir):
             writer.add_scalar('curve/test acc', test_acc, epoch)
         if epoch % 50 == 49:
             if logger is not None:
-                logger.print('Generate adversarial examples (fast, inaccurate)')
+                logger.print('Generate adversarial examples on training dataset and test dataset (fast, inaccurate)')
             robust_train_acc = gen_adv_examples(model,attacker, train_loader, gpu, parallel, logger, fast=True)
             robust_test_acc = gen_adv_examples(model, attacker, test_loader, gpu, parallel, logger, fast=True)
             if writer is not None:
@@ -380,11 +380,11 @@ def main_worker(gpu, parallel, args, result_dir):
     certified_test(model, args.eps_test, up, down, args.epochs[-1], train_loader, logger, gpu, parallel)
     certified_test(model, args.eps_test, up, down, args.epochs[-1], test_loader, logger, gpu, parallel)
 
-    # if output_flag:
-    #     torch.save({
-    #         'state_dict': model.state_dict(),
-    #         'optimizer' : optimizer.state_dict(),
-    #     }, os.path.join(result_dir, 'model.pth'))
+    if output_flag:
+        torch.save({
+            'state_dict': model.state_dict(),
+            'optimizer' : optimizer.state_dict(),
+        }, os.path.join(result_dir, 'model.pth'))
     if writer is not None:
         writer.close()
 
