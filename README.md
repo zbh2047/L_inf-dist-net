@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the official code for training the L_inf-dist net, a theoretically principled neural network that inherently resists L_inf-norm perturbations. We consistently achieve state-of-the-art performance on commonly used datasets: **93.09%** certiﬁed accuracy on MNIST under eps = 0.3, **79.23%** on Fashion-MNIST under eps = 0.1 and **35.10%** on CIFAR-10 under eps = 8/255. Our paper is on [arxiv]( https://github.com/zbh2047/L_inf-dist-net ).
+This is the official code for training the L_inf-dist net, a theoretically principled neural network that inherently resists L_inf-norm perturbations. We consistently achieve state-of-the-art performance on commonly used datasets: **93.09%** certiﬁed accuracy on MNIST under eps = 0.3, **79.23%** on Fashion-MNIST under eps = 0.1 and **35.10%** on CIFAR-10 under eps = 8/255. Our paper is on [arxiv](  https://arxiv.org/abs/2102.05363  ).
 
 ## Dependencies
 
