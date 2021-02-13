@@ -188,7 +188,7 @@ def certified_test(net, eps, up, down, epoch, testloader, logger, gpu, parallel)
     if parallel:
         res, = parallel_reduce(res)
     if logger is not None:
-        logger.print('Epoch %d: '%epoch + ' certify acc ' + f'{res:.4f}')
+        logger.print('Epoch %d: '%epoch + ' certified acc ' + f'{res:.4f}')
     set_p_norm(net, save_p)
     set_eps(net, save_eps)
     return res
@@ -365,9 +365,9 @@ def main_worker(gpu, parallel, args, result_dir):
                 writer.add_scalar('curve/robust train acc', robust_train_acc, epoch)
                 writer.add_scalar('curve/robust test acc', robust_test_acc, epoch)
         if epoch % 5 == 4:
-            certify_acc = certified_test(model, args.eps_test, up, down, epoch, test_loader, logger, gpu, parallel)
+            certified_acc = certified_test(model, args.eps_test, up, down, epoch, test_loader, logger, gpu, parallel)
             if writer is not None:
-                writer.add_scalar('curve/certify acc', certify_acc, epoch)
+                writer.add_scalar('curve/certified acc', certified_acc, epoch)
         if epoch > args.epochs[-1] - 3:
             if logger is not None:
                 logger.print("Generate adversarial examples on test dataset")
