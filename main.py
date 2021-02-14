@@ -376,7 +376,7 @@ def main_worker(gpu, parallel, args, result_dir):
 
     schedule(args.epochs[-1], 0)
     if output_flag:
-        logger.print("Calculate certified accuracy")
+        logger.print("Calculate certified accuracy on training dataset and test dataset")
     certified_test(model, args.eps_test, up, down, args.epochs[-1], train_loader, logger, gpu, parallel)
     certified_test(model, args.eps_test, up, down, args.epochs[-1], test_loader, logger, gpu, parallel)
 
