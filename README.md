@@ -35,7 +35,7 @@ To reproduce the results of CIFAR-10 using the $\ell_\infty$-dist Net+MLP, simpl
 bash command/ell_inf_dist_net++_cifar10.sh
 ```
 
-For TinyImageNet dataset, the dataset can be download from  http://cs231n.stanford.edu/tiny-imagenet-200.zip. Also you should run `tiny_imagenet.sh` to tiny the dataset.
+For TinyImageNet dataset, the dataset can be download from  http://cs231n.stanford.edu/tiny-imagenet-200.zip. Also you should run `tiny_imagenet.sh` to tidy the dataset.
 
 ## Advanced Training Options
 
