@@ -1,0 +1,1 @@
+python main.py --model 'MLPFeature(depth=5,width=5)' --dataset TinyImageNet --predictor-hidden-size 512 --loss 'cross_entropy' --p-start 8 --p-end 1000 --epochs 0,100,200,450,500 --kappa 1.0 --eps-train 0.005 -b 512 --lr 0.04 --wd 5e-3 --gpu 0 --visualize -p 200

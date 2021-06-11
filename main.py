@@ -271,7 +271,7 @@ def main_worker(gpu, parallel, args, result_dir):
     assert args.batch_size % args.world_size == 0
     from dataset import load_data, get_statistics, default_eps, input_dim
     train_loader, test_loader = load_data(args.dataset, 'data/', args.batch_size // args.world_size, parallel,
-                                          augmentation=True, classes=None)
+                                          augmentation=True)
     mean, std = get_statistics(args.dataset)
     num_classes = len(train_loader.dataset.classes)
 
