@@ -1,4 +1,4 @@
-# L_inf-dist Net: Towards Certifying L_inf Robustness using Neural Networks with L_inf-dist Neurons  
+# L_inf-dist Net: Towards Certifying L-infinity Robustness using Neural Networks with L_inf-dist Neurons  
 
 ## Introduction
 
