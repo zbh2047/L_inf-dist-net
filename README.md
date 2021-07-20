@@ -58,13 +58,13 @@ Please contact [zhangbohang@pku.edu.cn](zhangbohang@pku.edu.cn)  if you have any
 ## Citation
 
 ```
-@article{zhang2021certifying,
-      title={Towards Certifying $\ell_\infty$ Robustness using Neural Networks with $\ell_\infty$-dist Neurons}, 
-      author={Bohang Zhang and Tianle Cai and Zhou Lu and Di He and Liwei Wang},
-      year={2021},
-      eprint={2102.05363},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@inproceedings{zhang2021towards,
+  title={Towards Certifying L-infinity Robustness using Neural Networks with L-inf-dist Neurons},
+  author={Zhang, Bohang and Cai, Tianle and Lu, Zhou and He, Di and Wang, Liwei},
+  booktitle={International Conference on Machine Learning},
+  pages={12368--12379},
+  year={2021},
+  organization={PMLR}
 }
 ```
 
