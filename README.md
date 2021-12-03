@@ -4,6 +4,8 @@
 
 This is the official code for training the L_inf-dist net, a theoretically principled neural network that inherently resists L_inf-norm perturbations. We consistently achieve state-of-the-art performance on commonly used datasets: **93.09%** certiﬁed accuracy on MNIST under eps = 0.3, **79.23%** on Fashion-MNIST under eps = 0.1, **35.42%** on CIFAR-10 under eps = 8/255 and **16.31%** on TinyImageNet under eps = 1/255.  [Our paper](  https://arxiv.org/abs/2102.05363  ) has been accepted by ICML 2021.
 
+**2021.12.1 Update**: We have released a better implementation of L_inf-dist Net with faster training and better certified accuracy. See the repository [here](  https://github.com/zbh2047/L_inf-dist-net-v2 ). Our latest paper is on  [arxiv](  https://arxiv.org/abs/2110.06850  ).
+
 ## Dependencies
 
 - Pytorch 1.6.0
